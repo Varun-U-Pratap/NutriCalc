@@ -2,54 +2,50 @@
 
 ![NutriCalc Banner](https://placehold.co/1200x400/6AF2A8/1A2E28?text=NutriCalc&font=inter)
 
-A personalized nutrition calculator and food logging application built with Flutter. NutriCalc helps users track their daily caloric intake, monitor macronutrient goals, and receive AI-powered suggestions to achieve their health objectives. This app was developed as a Skill Lab Mini Project.
+A personalized nutrition calculator and food logging application built with Flutter. NutriCalc revolutionizes health tracking by integrating advanced AI to provide users with actionable, intelligent insights. This app was developed as a Skill Lab Mini Project.
 
 ---
 
 ## ✨ Features
 
-NutriCalc is packed with features designed to provide a seamless and intelligent health tracking experience.
+NutriCalc is built on the philosophy that health tracking should be both data-driven and conversationally intelligent.
+
+### 🤖 AI-Powered Intelligence (Powered by Google Gemini)
+The core of NutriCalc's innovation lies in its deep integration with the **Google Gemini API**, transforming a standard logger into a proactive health coach:
+- **Calix AI Health Assistant**: More than a chatbot, Calix is an integrated conversational partner. It analyzes your unique profile data to provide real-time, context-aware advice on diet, nutrition, and workout routines.
+- **Intelligent 7-Day Diet Generation**: Leveraging the generative power of Gemini, NutriCalc creates full-week Indian meal plans. These aren't generic templates; they are dynamically tailored to your specific caloric and macronutrient targets.
+- **AI-Driven Tip of the Day**: Every morning, the dashboard greets you with a unique, AI-generated health tip or motivational insight to keep you engaged with your goals.
+- **Smart Persistence & Caching**: To ensure a responsive experience, all AI-generated content (tips and diet plans) is locally cached. This reduces unnecessary API latency and ensures your personalized plans are available even when offline.
 
 ### Core Functionality
-- **Multi-Profile Management**: Create and manage multiple user profiles, each with unique physical stats and health goals (lose, maintain, or gain weight).
-- **Personalized Nutrition Plan**: Automatically calculates daily targets for calories, macronutrients (protein, carbs, fat), and key micronutrients based on the Mifflin-St Jeor equation.
-- **Comprehensive Food Search**: Utilizes the Edamam API to search a massive database of food items.
-- **Daily Food Logging**: Easily log meals and track consumption against daily goals.
-- **Historical Reports & Weight Tracking**: View historical charts for calorie intake and track weight progress over time.
-- **Local Data Persistence**: All profiles, logs, and settings are saved locally on the device using `SharedPreferences`.
-
-### AI-Powered Features (Powered by Google Gemini)
-- **Calix Health Assistant**: An integrated conversational AI chatbot that provides personalized diet and workout advice.
-- **7-Day Diet Plan Suggestions**: Automatically generates a full week of Indian meal suggestions tailored to the user's nutritional targets.
-- **Tip of the Day**: Displays a new, motivational health tip on the dashboard every day.
-- **Caching**: AI-generated content (tips and diet plans) is cached locally to reduce API calls and enable offline access.
+- **Multi-Profile Management**: Create and manage multiple user profiles, each with unique physical stats and specific health goals (lose, maintain, or gain weight).
+- **Personalized Nutrition Science**: Automatically calculates daily targets for calories, macronutrients (protein, carbs, fat), and key micronutrients using the clinically recognized Mifflin-St Jeor equation.
+- **Comprehensive Food Search**: Integrates the Edamam API to provide instant access to a massive database of food items for precise logging.
+- **Historical Insights**: View detailed charts and weight tracking progress to visualize your journey over time.
+- **Privacy-First Storage**: All personal profiles, logs, and settings are saved locally on the device using `SharedPreferences`.
 
 ### Polished User Experience
-- **Sleek & Animated UI**: Beautiful, animated widgets for progress tracking (BMI, calories, macros) and staggered list animations create a fluid and responsive feel.
-- **Light & Dark Mode**: A custom-designed theme system that supports both light and dark modes.
-- **Shimmer Loading Effects**: Professional loading skeletons appear while AI content is being generated.
-- **Consistent Page Transitions**: Smooth, custom "slide and fade" animations for all screen navigation.
-- **Haptic Feedback**: Subtle vibrations on key interactions to enhance the user experience.
-- **Secure API Key Management**: An in-app, password-protected screen allows users to manage their own API keys.
+- **Sleek & Animated UI**: Features custom-built animated widgets for BMI gauges, calorie progress, and macro distribution.
+- **Adaptive Theme System**: Sophisticated support for both Light and Dark modes.
+- **Performance-Oriented UI**: Utilizes Shimmer loading skeletons while the AI is "thinking" and generating your custom plans.
+- **Haptic & Visual Feedback**: Seamless page transitions and haptic feedback ensure every interaction feels premium and responsive.
+- **Secure Key Management**: A dedicated, password-protected interface for users to manage their own API credentials.
 
 ---
 
 ## 🛠️ Tech Stack & Packages
 
 - **Framework**: Flutter
-- **State Management**: Flutter Riverpod
-- **APIs**:
-  - Edamam API (Food Database)
-  - Google Gemini API (AI Features)
+- **AI Engine**: Google Gemini API (Generative AI)
+- **State Management**: Flutter Riverpod (for scalable, reactive state)
+- **Data APIs**: Edamam Food Database API
 - **Key Packages**:
-  - `http`: For making API calls.
-  - `shared_preferences`: For local data storage.
-  - `fl_chart`: For beautiful charts and graphs.
-  - `flutter_svg`: For using SVG assets.
-  - `shimmer`: For the loading effect.
-  - `url_launcher`: For opening web links.
-  - `intl`: For date formatting.
-- **Architecture**: A clean, scalable architecture separating UI (Screens/Widgets), business logic (Providers), and data (Models).
+  - `http`: For robust API communication.
+  - `shared_preferences`: For efficient local data persistence.
+  - `fl_chart`: For high-performance data visualization.
+  - `shimmer`: For professional AI-content loading states.
+  - `flutter_svg`: For crisp, scalable iconography.
+  - `intl` & `url_launcher`: For utility and external linking.
 
 ---
 
@@ -76,9 +72,9 @@ Follow these instructions to get a local copy up and running for development and
     ```
 
 3.  **Configure API Keys:**
-    This project requires API keys from Edamam and Google Gemini to function correctly.
-    - **Option A (Recommended):** Run the app and navigate to `Settings -> Edit API Keys`. Enter your keys here to save them securely.
-    - **Option B (For initial setup):** Open the `lib/constants/api_constants.dart` file and replace the placeholder values with your actual keys.
+    NutriCalc requires API keys for both Edamam (Data) and Google Gemini (Intelligence).
+    - **Option A (In-App):** Run the app and navigate to `Settings -> Edit API Keys`.
+    - **Option B (Hardcoded):** Open `lib/constants/api_constants.dart` and update the constants:
 
     ```dart
     // lib/constants/api_constants.dart
@@ -100,7 +96,7 @@ Follow these instructions to get a local copy up and running for development and
 
 ## 🧑‍💻 About the Developers
 
-This app was created by:
+This project was envisioned and built by:
 
 - **Varun U Pratap**
   - **LinkedIn**: [https://www.linkedin.com/in/varun-u-pratap-856826340](https://www.linkedin.com/in/varun-u-pratap-856826340)
@@ -112,4 +108,4 @@ This app was created by:
 
 ## 📞 Contact Us
 
-For any inquiries or feedback regarding this project, please feel free to reach out to us on LinkedIn.
+For any inquiries, feedback, or collaborations regarding NutriCalc, please reach out to us on LinkedIn.
